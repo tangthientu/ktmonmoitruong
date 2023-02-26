@@ -18,7 +18,29 @@
     <br><br>
     <input type="text" id="txtpassword" name="txtpassword"><br><br>
 
-    <button type="button" onclick="alert('Hello world!')">đăng nhập</button>
+    <button type="button" onclick="login()" value="Submit">đăng nhập</button>
+
+    <p id="demo"></p>
+    <script>
+        function login() {
+            var user = document.getElementById("txtUserName").value;
+            var password = document.getElementById("txtpassword").value;
+
+            if (user === "admin" && password === "admin") {
+                alert("Đăng nhập thành công")
+                console.log("admin")
+                    // alert("You Are a ADMIN");
+
+            } else {
+                alert("Sai thông tin đăng nhập!");
+                return;
+            }
+
+            if (user == "" && password == "") {
+                alert("Vui long dang nhap");
+            }
+        }
+    </script>
 </body>
 
 </html>
